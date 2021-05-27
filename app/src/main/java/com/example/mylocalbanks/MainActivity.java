@@ -56,9 +56,9 @@ public class MainActivity extends AppCompatActivity {
             tvUOB.setText("UOB");
             return true;
         } else if (id == R.id.ChineseSelection) {
-            tvDBS.setText("星展银行");
-            tvOCBC.setText("华侨银行");
-            tvUOB.setText("大华银行");
+            tvDBS.setText(getString(R.string.chineseDBS));
+            tvOCBC.setText(getString(R.string.chineseOCBC));
+            tvUOB.setText(getString(R.string.chineseUOB));
             return true;
         }
 
@@ -86,12 +86,12 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         if (wordClicked.equalsIgnoreCase("DBS")) {
             if (id == R.id.WebsiteSelection) {
-                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dbs.com.sg"));
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.dbsWebsite)));
                 startActivity(i);
 
 
             } else if (id == R.id.ContactSelection) {
-                Intent iCall = new Intent(Intent.ACTION_DIAL, Uri.parse("tel: " + 18001111111l));
+                Intent iCall = new Intent(Intent.ACTION_DIAL, Uri.parse("tel: " + getString(R.string.dbsTel)));
                 startActivity(iCall);
 
             } else if (id == R.id.favouriteSelection) {
@@ -106,11 +106,11 @@ public class MainActivity extends AppCompatActivity {
 
         } else if (wordClicked.equalsIgnoreCase("OCBC")) {
             if (id == R.id.WebsiteSelection) {
-                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ocbc.com"));
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.ocbcWebsite)));
                 startActivity(i);
 
             } else if (id == R.id.ContactSelection) {
-                Intent iCall = new Intent(Intent.ACTION_DIAL, Uri.parse("tel: " + 18003633333l));
+                Intent iCall = new Intent(Intent.ACTION_DIAL, Uri.parse("tel: " + getString(R.string.ocbcTel)));
                 startActivity(iCall);
 
             } else if (id == R.id.favouriteSelection) {
@@ -125,11 +125,11 @@ public class MainActivity extends AppCompatActivity {
 
         } else if (wordClicked.equalsIgnoreCase("UOB")) {
             if (id == R.id.WebsiteSelection) {
-                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.uob.com.sg"));
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.uobWebsite)));
                 startActivity(i);
 
             } else if (id == R.id.ContactSelection) {
-                Intent iCall = new Intent(Intent.ACTION_DIAL, Uri.parse("tel: " + 18002222121l));
+                Intent iCall = new Intent(Intent.ACTION_DIAL, Uri.parse("tel: " + getString(R.string.uobTel)));
                 startActivity(iCall);
 
             } else if (id == R.id.favouriteSelection) {
